@@ -58,7 +58,7 @@ class TheRace(object):
 
             position += 1
 
-    def get_results(self):
+    def execute(self):
         self.process_data()
         self.total_time_per_pilot()
         data_result = self.format_data_result()

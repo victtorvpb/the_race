@@ -1,6 +1,6 @@
 import unittest
 
-from .read_file_race import ReadFileRace
+from the_race.read_file_race import ReadFileRace
 from .variables_test import var_to_list
 
 class ReadFileRaceTests(unittest.TestCase):

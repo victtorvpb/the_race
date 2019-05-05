@@ -6,4 +6,4 @@ python:
   - "3.6"
 
 script:
- - python3 -m unittest -v the_race/tests_read_file_race.py the_race/tests_the_race.py
+ - make test

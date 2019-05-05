@@ -2,8 +2,8 @@ import unittest
 
 import datetime as dt
 
-from .read_file_race import ReadFileRace
-from .the_race import TheRace
+from the_race.read_file_race import ReadFileRace
+from the_race.the_race import TheRace
 from .variables_test import var_process_data, list_total_time
 
 
