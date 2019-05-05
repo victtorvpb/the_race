@@ -4,12 +4,12 @@ import datetime as dt
 
 from .read_file_race import ReadFileRace
 from .the_race import TheRace
-from .test_variables import var_process_data, list_total_time
+from .variables_test import var_process_data, list_total_time
 
 
 class TheRaceTests(unittest.TestCase):
     def setUp(self):
-        self.list_laps = ReadFileRace("ace.log").to_list
+        self.list_laps = ReadFileRace("race.log").to_list
         self.the_race = TheRace(self.list_laps)
 
     def test_process_datas(self):
