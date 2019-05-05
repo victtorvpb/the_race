@@ -4,6 +4,7 @@ import datetime as dt
 class TheRace(object):
     def __init__(self, list_laps):
         self.list_laps = list_laps
+        self.the_best_lap = dt.datetime.now()
 
     def process_data(self):
         data = {}
@@ -30,6 +31,7 @@ class TheRace(object):
         )
 
     def print_result(self, data_result):
+        print(f"The best lap: {self.the_best_lap.time()}")
 
         str_result = """ 
 - Position: {} \n
@@ -79,6 +81,9 @@ class TheRace(object):
         total_time = dt.timedelta(
             minutes=minutes_sum, seconds=seconds_sum, microseconds=microseconds_sum
         )
+
+        if (self.the_best_lap > sorted(time_list)[0]):
+            self.the_best_lap = sorted(time_list)[0]
 
         return total_time, sorted(time_list)[0]
 
