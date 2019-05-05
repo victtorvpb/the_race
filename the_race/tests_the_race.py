@@ -20,6 +20,6 @@ class TheRaceTests(unittest.TestCase):
 
         total_time = total_time = dt.timedelta(
             seconds=251,
-            microseconds=57800
+            microseconds=578000
         )
         self.assertEqual(self.the_race.calculate_total_time_pilot(list_total_time), total_time)
