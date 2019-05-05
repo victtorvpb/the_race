@@ -4,7 +4,7 @@ import datetime as dt
 
 from the_race.read_file_race import ReadFileRace
 from the_race.the_race import TheRace
-from .variables_test import var_process_data, list_total_time
+from .variables_test import var_process_data, list_total_time, var_data_result
 
 
 class TheRaceTests(unittest.TestCase):
@@ -24,3 +24,10 @@ class TheRaceTests(unittest.TestCase):
             self.the_race.calculate_total_time_pilot(list_total_time),
             (total_time, last_lap),
         )
+
+    def test_format_data_result(self):
+        self.the_race.process_data()
+        self.the_race.total_time_per_pilot()
+        data_result = self.the_race.format_data_result()
+
+        self.assertEqual(data_result, var_data_result)
