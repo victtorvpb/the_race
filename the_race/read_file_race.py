@@ -4,7 +4,7 @@ import os.path
 
 class ReadFileRace(object):
     def __init__(self, file_path):
-        if not os.path.isfile(file_path,):
+        if not os.path.isfile(file_path):
             raise FileExistsError(f"File {file_path} not exist")
 
         self.file_path = file_path
@@ -15,9 +15,9 @@ class ReadFileRace(object):
             laps = []
             for i, line in enumerate(file):
                 lap = {}
-                if(i != 0):
-                    # import pdb; pdb.set_trace()
-                    match = re.findall('[\w.:]+', line)
+                if i != 0:
+
+                    match = re.findall("[\w.:]+", line)
                     lap["time"] = match[0]
                     lap["id"] = match[1]
                     lap["name"] = match[2]
