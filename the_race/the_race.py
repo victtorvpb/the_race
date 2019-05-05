@@ -4,7 +4,7 @@ import datetime as dt
 class TheRace(object):
     def __init__(self, list_laps):
         self.list_laps = list_laps
-        self.the_best_lap = dt.datetime.now()
+        self.the_best_lap = None
 
     def process_data(self):
         data = {}
@@ -82,7 +82,9 @@ class TheRace(object):
             minutes=minutes_sum, seconds=seconds_sum, microseconds=microseconds_sum
         )
 
-        if (self.the_best_lap > sorted(time_list)[0]):
+        if not self.the_best_lap:
+            self.the_best_lap = sorted(time_list)[0]
+        elif self.the_best_lap > sorted(time_list)[0]:
             self.the_best_lap = sorted(time_list)[0]
 
         return total_time, sorted(time_list)[0]
