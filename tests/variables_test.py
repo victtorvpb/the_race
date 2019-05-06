@@ -478,4 +478,3 @@ var_data_result = {
         "avg_speed": 25.333333333333332,
     },
 }
-

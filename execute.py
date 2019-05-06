@@ -16,9 +16,7 @@ def usage():
 
 def main():
     try:
-        opts, args = getopt.getopt(
-            sys.argv[1:], "hfotu", ["help", "file="]
-        )
+        opts, args = getopt.getopt(sys.argv[1:], "hfotu", ["help", "file="])
         print("opts", opts)
     except getopt.GetoptError as e:
         print(str(e))

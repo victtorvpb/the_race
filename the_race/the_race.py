@@ -104,7 +104,7 @@ class TheRace(object):
             dict_result["best_lap"] = item.get("best_lap")
             dict_result["avg_speed"] = self.avg_velocity(item.get("laps"))
             data_result[key] = dict_result
-        
+
         return data_result
 
     def avg_velocity(self, laps):

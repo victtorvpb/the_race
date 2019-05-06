@@ -41,4 +41,3 @@ class TheRaceTests(unittest.TestCase):
     def test_avg_speed(self):
         avg_speed = 44.0000
         self.assertEqual(self.the_race.avg_velocity(list_total_time), avg_speed)
-
