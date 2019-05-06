@@ -440,35 +440,42 @@ var_data_result = {
         "name": "F.MASSA",
         "number_laps": 4,
         "best_lap": datetime.datetime(1900, 1, 1, 0, 1, 2, 769000),
+        "avg_speed": 44.0,
     },
     "033": {
         "code": "033",
         "name": "R.BARRICHELLO",
         "number_laps": 4,
         "best_lap": datetime.datetime(1900, 1, 1, 0, 1, 3, 716000),
+        "avg_speed": 43.0,
     },
     "002": {
         "code": "002",
         "name": "K.RAIKKONEN",
         "number_laps": 4,
         "best_lap": datetime.datetime(1900, 1, 1, 0, 1, 3, 76000),
+        "avg_speed": 43.25,
     },
     "023": {
         "code": "023",
         "name": "M.WEBBER",
         "number_laps": 4,
         "best_lap": datetime.datetime(1900, 1, 1, 0, 1, 4, 216000),
+        "avg_speed": 42.75,
     },
     "015": {
         "code": "015",
         "name": "F.ALONSO",
         "number_laps": 4,
         "best_lap": datetime.datetime(1900, 1, 1, 0, 1, 7, 11000),
+        "avg_speed": 37.5,
     },
     "011": {
         "code": "011",
         "name": "S.VETTEL",
         "number_laps": 3,
         "best_lap": datetime.datetime(1900, 1, 1, 0, 1, 18, 97000),
+        "avg_speed": 25.333333333333332,
     },
 }
+

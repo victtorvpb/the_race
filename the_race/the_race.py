@@ -39,6 +39,7 @@ class TheRace(object):
 - Pilot Name: {} \n
 - Laps: {} \n
 - The best lap: {} \n
+- Avg speed: {:10.4f} \n
 - Total Time: {} \n
             """
         position = 1
@@ -54,6 +55,7 @@ class TheRace(object):
                     result["name"],
                     result["number_laps"],
                     result["best_lap"].time(),
+                    result["avg_speed"],
                     item,
                 )
             )
@@ -98,6 +100,15 @@ class TheRace(object):
             dict_result["name"] = item.get("laps")[0]["name"]
             dict_result["number_laps"] = len(item.get("laps"))
             dict_result["best_lap"] = item.get("best_lap")
+            dict_result["avg_speed"] = self.avg_velocity(item.get("laps"))
             data_result[key] = dict_result
-
+        
         return data_result
+
+    def avg_velocity(self, laps):
+        sum_velocity = 0
+
+        for lap in laps:
+            sum_velocity += float(lap["avg_speed"])
+
+        return sum_velocity / len(laps)

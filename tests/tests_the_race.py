@@ -31,9 +31,14 @@ class TheRaceTests(unittest.TestCase):
         data_result = self.the_race.format_data_result()
 
         self.assertEqual(data_result, var_data_result)
-    
+
     def test_best_time(self):
         self.the_race.execute()
-        
+
         best_last_lap = dt.datetime.strptime("1:02.769", "%M:%S.%f")
         self.assertEqual(self.the_race.the_best_lap.time(), best_last_lap.time())
+
+    def test_avg_speed(self):
+        avg_speed = 44.0000
+        self.assertEqual(self.the_race.avg_velocity(list_total_time), avg_speed)
+
