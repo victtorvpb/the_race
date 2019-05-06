@@ -40,10 +40,11 @@ class TheRace(object):
 - Laps: {} \n
 - The best lap: {} \n
 - Avg speed: {:10.4f} \n
+- Time after the winner: {} \n
 - Total Time: {} \n
             """
         position = 1
-
+        first_total_time = self.total_time_per_pilot[0][1]
         for key, item in self.total_time_per_pilot:
 
             result = data_result[key]
@@ -56,6 +57,7 @@ class TheRace(object):
                     result["number_laps"],
                     result["best_lap"].time(),
                     result["avg_speed"],
+                    item - first_total_time,
                     item,
                 )
             )
